@@ -50,7 +50,7 @@ Refer to the `demo_request.json` file for these examples.
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Clone the repository
 2. Set up your `.env` file with your GROQ and LANGCHAIN API keys.
