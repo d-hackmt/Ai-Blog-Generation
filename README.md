@@ -3,7 +3,7 @@
 ```
 This app doesnt contain frontend ,
 
-check in v1 v2 images folder to understand different versions of the app
+check in v1v2 images folder to see different versions of the app
 ```
 ```
 We learn how to make api calls here
