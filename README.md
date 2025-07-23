@@ -39,7 +39,7 @@ This is the main endpoint for generating blogs.
 
 ---
 
-## 💡 Sample Requests
+## Sample Requests
 
 | Version | Description                                     | Sample Input |
 |---------|-------------------------------------------------|--------------|
