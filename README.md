@@ -31,7 +31,7 @@ This project is **backend only** and does **not include a frontend UI**. You can
 
 ---
 
-## 🔌 API Endpoint
+##  API Endpoint
 
 ### `POST /blogs`
 
