@@ -18,6 +18,7 @@ We learn how to make api calls here
 3. Postman
 ```
 
+### LLM calls tracing
 
 Langsmith tracing & observablity is used to have more clearer picture for the flow of inputs and outputs
 
