@@ -14,10 +14,10 @@ print(os.getenv("LANGCHAIN_API_KEY"))
 
 app = FastAPI()
 
-LANGSMITH_TRACING="true"
-LANGSMITH_ENDPOINT="https://api.smith.langchain.com"
-LANGSMITH_API_KEY = os.getenv("LANGCHAIN_API_KEY")
-LANGSMITH_PROJECT="Blog_Generation_v1"
+os.environ["LANGCHAIN_TRACING"] = "true"
+os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
+os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
+os.environ["LANGCHAIN_PROJECT"] = "Blog_Generation_v1"
 
 
 ## API's
@@ -28,6 +28,7 @@ LANGSMITH_PROJECT="Blog_Generation_v1"
 async def create_blogs(request:Request):
     data = await request.json()
     topic = data.get("topic" , "")
+    language = data.get("language" , "")
     
     ## get llm object 
     
@@ -37,10 +38,14 @@ async def create_blogs(request:Request):
     ## get the graph
     
     graph_builder  = GraphBuilder(llm)
-    
-    if topic:
+    if topic and language:
+        graph = graph_builder.setup_graph(usecase="language")
+        state = graph.invoke({"topic":topic , "current_language":language.lower()})
+        
+    elif topic:
         graph = graph_builder.setup_graph(usecase="topic")
         state = graph.invoke({"topic":topic})
+    
         
     return {"data":state}
     

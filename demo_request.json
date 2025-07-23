@@ -1,4 +1,15 @@
 {
-    "topic" : "Agentic AI",
-    "language" : "French"
+  "v1_request": {
+    "description": "Basic blog generation request with just the topic.",
+    "input": {
+      "topic": "Agentic AI"
+    }
+  },
+  "v2_request": {
+    "description": "Blog generation with topic and target language for localization.",
+    "input": {
+      "topic": "Agentic AI",
+      "language": "French"
+    }
+  }
 }

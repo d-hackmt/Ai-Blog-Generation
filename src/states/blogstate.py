@@ -7,8 +7,8 @@ class Blog(BaseModel):
     title:str=Field(description="the title of the blog post")
     content:str=Field(description="the main content of the blog post")
     
-    
-class BlogState(TypedDict):
-    topic:str 
-    blog:Blog 
+
+class BlogState(TypedDict, total=False):  # makes fields optional
+    topic: str
+    blog: Blog
     current_language: str
