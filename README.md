@@ -87,10 +87,12 @@ Make sure your FastAPI app is running while using LangGraph Studio to visualize 
 
 ##  Tech Stack
 
+```
 - LangGraph – Graph-based flow controller for agentic applications
 - FastAPI – Lightweight web framework for serving APIs
 - Postman – For testing API requests
 - LangSmith – For tracing, observability and debugging LLM flow
+```
 
 ---
 
