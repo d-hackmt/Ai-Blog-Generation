@@ -10,12 +10,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+print(os.getenv("LANGCHAIN_API_KEY"))
 
 app = FastAPI()
 
-os.environ["LANGSMITH_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
-
 LANGSMITH_TRACING="true"
+LANGSMITH_ENDPOINT="https://api.smith.langchain.com"
+LANGSMITH_API_KEY = os.getenv("LANGCHAIN_API_KEY")
+LANGSMITH_PROJECT="Blog_Generation_v1"
 
 
 ## API's
